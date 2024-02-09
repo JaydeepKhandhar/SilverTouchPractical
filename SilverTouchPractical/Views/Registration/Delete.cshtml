@@ -1,0 +1,37 @@
+﻿@model Registration
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Delete Registration</h1>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+
+    <form method="post">
+        <div class="m-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" disabled />
+        </div>
+        <div class="m-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" disabled />
+        </div>
+        <div class="m-3">
+            <label asp-for="DateOfBirth"></label>
+            <input asp-for="DateOfBirth" disabled type="date" />
+        </div>
+        <div class="m-3">
+            <label asp-for="City"></label>
+            <input asp-for="City" disabled />
+        </div>
+        <div class="m-3">
+            <label asp-for="State"></label>
+            <input asp-for="State" disabled />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-danger mt-2">Delete</button>
+        </div>
+    </form>
+
+</div>

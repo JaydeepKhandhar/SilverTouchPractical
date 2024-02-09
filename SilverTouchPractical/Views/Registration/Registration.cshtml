@@ -1,0 +1,42 @@
+﻿@model Registration
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Registration Form</h1>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+
+    <form asp-action="Registration" method="post">
+        <div class="m-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" />
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <div class="m-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+        </div>
+        <div class="m-3">
+            <label asp-for="DateOfBirth"></label>
+            <input asp-for="DateOfBirth" type="date" />
+            <span asp-validation-for="DateOfBirth"></span>
+        </div>
+        <div class="m-3">
+            <label asp-for="City"></label>
+            <input asp-for="City" />
+            <span asp-validation-for="City"></span>
+        </div>
+        <div class="m-3">
+            <label asp-for="State"></label>
+            <input asp-for="State" />
+            <span asp-validation-for="State"></span>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </div>
+    </form>
+
+</div>

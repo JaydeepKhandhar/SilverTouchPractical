@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Registration>
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Registration Form</h1>
+    <a asp-action="Registration" class="btn btn-primary">New Registration</a>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="m-2 p-4">
+                    <td class="px-4">@item.FirstName</td>
+                    <td class="px-4">@item.LastName</td>
+                    <td class="px-4">@item.DateOfBirth</td>
+                    <td class="px-4">@item.City</td>
+                    <td class="px-4">@item.State</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-secondary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
